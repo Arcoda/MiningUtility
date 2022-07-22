@@ -9,7 +9,6 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3i;
@@ -45,7 +44,7 @@ public class InvertedRopeLadderBlock extends LadderBlock {
 
     @Override
     public void appendTooltip(ItemStack itemStack, BlockView world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(new TranslatableText("block.miningutility.inverted_rope_ladder.tooltip").formatted(Formatting.GRAY));
-        tooltip.add(new TranslatableText("block.miningutility.rope_ladders.common.tooltip").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("block.miningutility.inverted_rope_ladder.tooltip").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("block.miningutility.rope_ladders.common.tooltip").formatted(Formatting.GRAY));
     }
 }

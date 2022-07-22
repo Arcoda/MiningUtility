@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -55,7 +54,7 @@ public class MiniTorchBlock extends Block {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(new TranslatableText("block.miningutility.mini_torch.tooltip").formatted(Formatting.LIGHT_PURPLE));
+        tooltip.add(Text.translatable("block.miningutility.mini_torch.tooltip").formatted(Formatting.LIGHT_PURPLE));
     }
 
     private static final VoxelShape BOUNDING_SHAPE = Block.createCuboidShape(6.0D, 0.0D, 6.0D, 10.0D, 10.0D, 10.0D);
